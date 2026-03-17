@@ -81,17 +81,17 @@ Write-Host "=== M365 Licence Spend Comparison ($TotalUsers users) ==="
 Write-Host ""
 Write-Host ("{0,-35} {1,15} {2,15}" -f "Scenario", "Monthly", "Annual")
 Write-Host ("{0,-35} {1,15} {2,15}" -f ("-" * 35), ("-" * 15), ("-" * 15))
-Write-Host ("{0,-35} {1,15} {2,15}" -f "Current state", "$('{0:N0}' -f $currentSpend)", "$('{0:N0}' -f ($currentSpend * 12))")
-Write-Host ("{0,-35} {1,15} {2,15}" -f "All E5", "$('{0:N0}' -f $allE5Spend)", "$('{0:N0}' -f ($allE5Spend * 12))")
-Write-Host ("{0,-35} {1,15} {2,15}" -f "Optimised E3 + add-ons", "$('{0:N0}' -f $optimisedSpend)", "$('{0:N0}' -f ($optimisedSpend * 12))")
+Write-Host ("{0,-35} {1,15} {2,15}" -f "Current state", "£$('{0:N0}' -f $currentSpend)", "£$('{0:N0}' -f ($currentSpend * 12))")
+Write-Host ("{0,-35} {1,15} {2,15}" -f "All E5", "£$('{0:N0}' -f $allE5Spend)", "£$('{0:N0}' -f ($allE5Spend * 12))")
+Write-Host ("{0,-35} {1,15} {2,15}" -f "Optimised E3 + add-ons", "£$('{0:N0}' -f $optimisedSpend)", "£$('{0:N0}' -f ($optimisedSpend * 12))")
 Write-Host ""
 
 $savingVsCurrent = ($currentSpend - $optimisedSpend) * 12
 $savingVsAllE5 = ($allE5Spend - $optimisedSpend) * 12
 
-Write-Host "E5 premium over E3:        $('{0:N2}' -f $e5Premium)/user/month"
+Write-Host "E5 premium over E3:        £$('{0:N2}' -f $e5Premium)/user/month"
 Write-Host ""
-Write-Host "Annual saving vs current:  $('{0:N0}' -f $savingVsCurrent)"
-Write-Host "Annual saving vs all-E5:   $('{0:N0}' -f $savingVsAllE5)"
+Write-Host "Annual saving vs current:  £$('{0:N0}' -f $savingVsCurrent)"
+Write-Host "Annual saving vs all-E5:   £$('{0:N0}' -f $savingVsAllE5)"
 Write-Host ""
-Write-Host "Breakpoint: E5 is cost-neutral when add-on costs exceed $('{0:N2}' -f $e5Premium)/user/month"
+Write-Host "Breakpoint: E5 is cost-neutral when add-on costs exceed £$('{0:N2}' -f $e5Premium)/user/month"

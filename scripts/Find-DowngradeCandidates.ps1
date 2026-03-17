@@ -57,8 +57,8 @@ $candidates | Export-Csv $outputPath -NoTypeInformation
 
 $monthlySaving = $candidates.Count * 16.60
 Write-Host "`nDowngrade candidates: $($candidates.Count) of $($e5Users.Count) E5 users"
-Write-Host "Estimated monthly saving: $('{0:C0}' -f $monthlySaving) (at list price delta of 16.60/user/month)"
-Write-Host "Estimated annual saving:  $('{0:C0}' -f ($monthlySaving * 12))"
+Write-Host "Estimated monthly saving: £$('{0:N0}' -f $monthlySaving) (at list price delta of £16.60/user/month)"
+Write-Host "Estimated annual saving:  £$('{0:N0}' -f ($monthlySaving * 12))"
 Write-Host "Report saved to: $outputPath"
 Write-Host ""
 

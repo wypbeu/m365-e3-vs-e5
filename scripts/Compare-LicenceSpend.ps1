@@ -51,7 +51,7 @@ param(
     [decimal]$MDEPrice      = 4.50,
     [decimal]$PhonePrice    = 7.40,
     [decimal]$PowerBiPrice  = 7.50,
-    [decimal]$CopilotPrice  = 24.00
+    [decimal]$CopilotPrice  = 25.00
 )
 
 $currentE3 = $TotalUsers - $CurrentE5Users
